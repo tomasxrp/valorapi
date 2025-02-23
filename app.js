@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded and parsed');
     const currentPage = window.location.pathname;
 
-    if(currentPage == '/sites/bundles'){
+    console.log(currentPage)
+
+    if(currentPage == '/sites/bundles.html'){
+        console.log('bundles')
         getBundles();
     }else if(currentPage == '/'){
+        console.log('home')
         newsSlider();
-    }else if(currentPage == '/sites/playercards'){
+    }else if(currentPage == '/sites/playerCards.html'){
         console.log('player cards')
         getPlayerCards();
     }
@@ -118,14 +123,10 @@ function createBundleElements(name, price, imagesrc){
     const CardTitle = document.createElement('h3');
     CardTitle.textContent = name;
 
-    const CardPrice = document.createElement('p');
-    CardPrice.textContent = price;
-
     const cardDescription = document.createElement('div');
     cardDescription.classList.add('description');
 
     cardDescription.appendChild(CardTitle);
-    cardDescription.appendChild(CardPrice);
 
     Card.appendChild(CardImage);
     Card.appendChild(cardDescription);

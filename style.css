@@ -37,6 +37,35 @@ header li{
     list-style: none;
 }
 
+header li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+header li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #bd515c;
+    transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+}
+
+header li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #bd515c;
+}
+
+header li a:hover{
+    color: #bd515c;
+}
+
 header nav a{
     text-decoration: none;
     color: #fff;
@@ -246,6 +275,64 @@ main{
     text-transform: uppercase;
     font-weight: 600;
 }
+
+
+.card-sections .content-sections a:hover{
+    background-color: #741720;
+    transition: ease-in 0.3s;
+}
+
+
+.mira-container{
+    width: 80%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem auto;
+}
+
+.mira-card{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    background-color: #1d2738; 
+    padding: 1.1rem; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in, background-color 0.2s ease-out;
+}
+
+
+.mira-description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    gap: 1.5rem;
+}
+
+.mira-description h3{
+    color:#ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mira-description h4{
+    font-weight: 500;
+    color:#ff0000;
+    font-weight: 400;
+}
+
+.mira-description p{
+    font-weight: 300;
+    color:#c7c7c7;
+}
+
+
+
+
+
+
+
 
 
 
